@@ -1,0 +1,5 @@
+void Peer::broadcastBlock(Block newBlock) {
+    for (auto& neighbor : neighbors) {
+        neighbor->receiveBlock(newBlock);
+    }
+}
